@@ -1,0 +1,44 @@
+/* components/overlay.css */
+
+.overlay-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #222;
+  z-index: 10000;
+
+  /* Initially hidden with 0 opacity, fade in */
+  opacity: 0;
+  animation: fadeInOverlay 1s forwards;
+  animation-delay: 0.1s;
+}
+
+/* Apply fade-out transition when state toggles */
+.overlay-screen.fade-out {
+  animation: fadeOutOverlay 1s forwards;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutOverlay {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

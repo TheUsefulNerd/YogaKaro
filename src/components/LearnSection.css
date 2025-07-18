@@ -1,0 +1,99 @@
+.learn-wrapper {
+  margin: 3rem auto 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+
+  /* 👇 Ensure shadows can overflow and z-index layering works */
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+
+.keen-slider__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 40px; /* 👈 Match shape so no rectangular peeking */
+  overflow: visible;
+  z-index: 1;
+  background: transparent;
+  
+}
+
+
+/* Active Slide - DevMode style card */
+.active-slide {
+  background: rgba(221, 217, 217, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 3rem 2rem;
+  border-radius: 40px !important;
+  text-align: center;
+  width: 340px;
+  max-width: 90vw;
+  transform: scale(1.05);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  box-shadow:
+    0 10px 30px rgba(64, 109, 232, 0.1),
+    0 25px 55px rgba(102, 126, 234, 0.5); /* 💙 visible blue glow */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+
+  /* 🔥 KEY FIXES */
+  z-index: 10;
+  position: relative;
+  overflow: visible;
+}
+
+
+
+/* Blue glow on hover like DevMode */
+.active-slide:hover {
+  transform: scale(1.08) rotateZ(0.4deg);
+  box-shadow:
+    0 10px 30px rgba(64, 109, 232, 0.1),
+    0 25px 55px rgba(102, 126, 234, 0.5); /* 💙 visible blue glow */
+  border-radius: 40px !important;
+  z-index: 11;
+}
+
+
+
+.active-slide h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+.active-slide p {
+  color: #4b5563;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+.animate-in {
+  animation: scaleIn 0.3s ease-out;
+}
