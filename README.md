@@ -1,15 +1,13 @@
-## Running React on Replit
-
 # YogaKaro
 
 **YogaKaro** YogaKaro is a wellness-meets-tech application built to simplify and demonstrate core concepts of Blockchain and Artificial Intelligence in a hands-on, intuitive way.
 
 ## Features
 
-- Browse a curated collection of yoga poses and routines
-- Step-by-step instructions and images for each pose
-- Personalized practice tracking and progress visualization
-- Responsive design for desktop and mobile devices
+- A Timer to track your Yoga Sessions
+- Snap Page to upload a Snap shot and win tokens.
+- Spend Tokens in the Marketplace to buy items or trade for another token.
+- Understand various concepts of Blockchain and AI with the codes, notes and help provided.
 
 ## Getting Started
 
@@ -35,14 +33,6 @@
 - `src/` – Main source code (components, pages, assets)
 - `public/` – Static files
 - `README.md` – Project documentation
-
-## Deployment
-
-To build the app for production:
-```bash
-npm run build
-```
-The output will be in the `dist/` folder. You can deploy it to any static hosting service.
 
 ## Contributing
 
